@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background: #fffed7;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  display: inline-flex;
+}
+
+.header {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  width: 854px;
+  text-align: center;
+  color: #282828;
+  font-size: 50px;
+  font-family: "Rammetto One", cursive;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.date {
+  width: 664px;
+  text-align: center;
+  color: #282828;
+  font-size: 35px;
+  font-family: "Rammetto One", cursive;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.emotions-container {
+  justify-content: center;
+  align-items: flex-end;
+  gap: 22px;
+  display: inline-flex;
+}
+
+.emotion-item {
+  width: 163px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.emotion-image {
+  align-self: stretch;
+  height: 163px;
+}
+
+.emotion-label {
+  align-self: stretch;
+  text-align: center;
+  color: #282828;
+  font-size: 22px;
+  font-family: "Rammetto One", cursive;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.excited {
+  width: 153px;
+  gap: 4px;
+}
+
+.excited .emotion-image {
+  height: 154px;
+}
+
+.playful {
+  width: 151px;
+  gap: 6px;
+}
+
+.playful .emotion-image {
+  height: 151px;
+}
+
+.bored {
+  width: 157px;
+  gap: 3px;
+}
+
+.bored .emotion-image {
+  height: 157px;
+}
+
+.anxious {
+  width: 158px;
+  gap: 3px;
+}
+
+.anxious .emotion-image {
+  height: 158px;
+}
+
+.sad {
+  width: 161px;
+  gap: 3px;
+}
+
+.sad .emotion-image {
+  height: 161px;
+}
+
+.angry .emotion-image {
+  height: 163px;
+}
+
+.buttons-container {
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: inline-flex;
+}
+
+.button {
+  min-height: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.cancel-button {
+  width: 226px;
+  height: 73px;
+  outline: 1px #fdd22d solid;
+  outline-offset: -1px;
+}
+
+.save-button {
+  width: 269px;
+  height: 73px;
+  background: #fdd22d;
+}
+
+.button-text {
+  font-size: 27px;
+  font-family: "Rammetto One", cursive;
+  font-weight: 400;
+  line-height: 16px;
+  word-wrap: break-word;
+}
+
+.cancel-text {
+  color: #fdd22d;
+}
+
+.save-text {
+  color: #fffed7;
+}
