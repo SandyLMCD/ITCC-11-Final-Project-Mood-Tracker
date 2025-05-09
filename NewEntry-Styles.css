@@ -11,8 +11,8 @@
   height: 100%;
   padding-left: 3px;
   padding-right: 3px;
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background: #fffed7;
   overflow: hidden;
   flex-direction: column;
@@ -62,6 +62,12 @@
   justify-content: center;
   align-items: center;
   display: inline-flex;
+}
+
+.emotion-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 .emotion-image {
@@ -155,10 +161,15 @@
   outline-offset: -1px;
 }
 
+.cancel-button:hover {
+  cursor: pointer;
+}
+
 .save-button {
   width: 269px;
   height: 73px;
   background: #fdd22d;
+  cursor: pointer;
 }
 
 .button-text {
