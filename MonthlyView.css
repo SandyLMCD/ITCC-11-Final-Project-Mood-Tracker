@@ -101,6 +101,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding-top: 10px;
 }
 
 .keyh1{
@@ -130,14 +131,20 @@ body{
 }
 
 .key-image{
-    border: 1px solid hsla(0, 0%, 34%, 0.50);
+    /* border: 1px solid hsla(0, 0%, 34%, 0.50); */
     width: 40px;
     height: 40px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .key-text{
+    display: flex;
+    align-items: center;
     font-family: cursive;
+    border-bottom: 1px solid;
+    height: 100%;
+    width: 250px;
 }
 
 
