@@ -54,6 +54,7 @@ body{
     padding: 10px 25px;
     font-family: "Rammetto One", cursive;
     transition: background-color .25s;
+    cursor: pointer;
 }
 
 .button-container button:hover{
@@ -168,7 +169,7 @@ body{
 .key-row img{
     width: 62px;
     transform: translate(-18%, -19%);
-    
+
 }
 
 .key-image{
