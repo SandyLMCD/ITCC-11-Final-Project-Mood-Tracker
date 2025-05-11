@@ -75,7 +75,27 @@ dates.forEach((date) => {
 });
 
 
+// GET CURRENT DAY MOOD FROM LOCAL STORAGE INFO FROM NewEntry
+const mood = localStorage.getItem("selectMood");
+const day = localStorage.getItem("currentUserDay");
 
+if (mood && day) {
+    targetDivDate = document.querySelector(`.day-${day}`); 
+    if (targetDivDate){
+        targetDivDate.classList.add(mood);
+    }
+}
+
+
+
+
+
+
+// BUTTON TO LOGOUT (but now back to NewEntry lang sa) = TEMPORARY
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.addEventListener("click", () => {
+    window.location.href = "NewEntry.html";
+});
 
 
 

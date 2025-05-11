@@ -13,49 +13,49 @@
         <div class="date">Date: {{Insert Date Here}}</div>
       </div>
       <div class="emotions-container">
-        <div class="emotion-item">
+        <div class="emotion-item" onclick="selectMood('relaxed')">
           <img
             class="emotion-image"
             src="emotion-assets/relaxed-Photoroom.png"
           />
           <div class="emotion-label">Relaxed</div>
         </div>
-        <div class="emotion-item excited">
+        <div class="emotion-item excited" onclick="selectMood('excited')">
           <img
             class="emotion-image"
             src="emotion-assets/happy-Photoroom.png"
           />
           <div class="emotion-label">Happy</div>
         </div>
-        <div class="emotion-item playful">
+        <div class="emotion-item playful" onclick="selectMood('playful')">
           <img
             class="emotion-image"
             src="emotion-assets/playful-Photoroom.png"
           />
           <div class="emotion-label">Playful</div>
         </div>
-        <div class="emotion-item bored">
+        <div class="emotion-item bored" onclick="selectMood('bored')">
           <img
             class="emotion-image"
             src="emotion-assets/bored-Photoroom.png"
           />
           <div class="emotion-label">Bored</div>
         </div>
-        <div class="emotion-item anxious">
+        <div class="emotion-item anxious" onclick="selectMood('anxious')">
           <img
             class="emotion-image"
             src="emotion-assets/anxious-Photoroom.png"
           />
           <div class="emotion-label">Anxious</div>
         </div>
-        <div class="emotion-item sad">
+        <div class="emotion-item sad" onclick="selectMood('sad')">
           <img
             class="emotion-image"
             src="emotion-assets/sad-Photoroom.png"
           />
           <div class="emotion-label">Sad</div>
         </div>
-        <div class="emotion-item angry">
+        <div class="emotion-item angry" onclick="selectMood('angry')">
           <img
             class="emotion-image"
             src="emotion-assets/angry-Photoroom.png"
@@ -82,7 +82,7 @@
           data-start-decorator?="false"
           data-state="Hover"
         >
-          <div class="button-text save-text">Save Entry</div>
+          <div class="button-text save-text" id="saveEntryBtn">Save Entry</div>
         </div>
       </div>
     </div>
