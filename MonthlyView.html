@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/MonthlyView.css" />
+    <link rel="stylesheet" href="MonthlyView.css" />
     
   </head>
   <body>
@@ -58,7 +58,7 @@
 
         <div class="right-container">
             <div class="selectedDate-container">
-                <h1>On {{selected date}} <br>I felt...</h1>
+                <h1 id="date-display"></h1>
                 <img id="selectedDate-image" src="Final Proj Assets/bored-Photoroom.png">
                 <h1>Bored</h1>
             </div>
@@ -107,12 +107,7 @@
 
     </div>
 
-    <!-- <div class="bottom-container">
-        <div class="button-container">
-            <button>Log out</button>
-            <button>git</button>
-        </div>
-    </div> -->
+    <script src="MonthlyView.js"></script>
     
   </body>
 </html>
