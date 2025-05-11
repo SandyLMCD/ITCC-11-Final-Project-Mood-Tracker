@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #fffed7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    /* border: 1px solid; */
+    overflow: hidden;
+    padding: 50px 200px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* -------------------------------LEFT CONTAINER------------------------------- */
+.left-container{
+    /* border: 1px solid; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+
+.name-container{
+    /* border: 1px solid; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.name-container h1{
+    font-family: "Rammetto One", cursive;
+    font-size: 36px;
+}
+
+
+
+
+
+/* -------------------------------RIGHT CONTAINER------------------------------- */
+.right-container{
+    /* border: 1px solid; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+
+.selectedDate-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid hsla(0, 0%, 34%, 0.50);
+    /* border-radius: 15px; */
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rammetto One", cursive;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.selectedDate-container h1{
+    font-size: 18px;
+    text-align: center;
+}
+
+#selectedDate-image{
+    width: 150px
+}
+
+
+
+
+/* -------------------------------KEY------------------------------- */
+.key-container{
+    /* border: 1px solid; */
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.keyh1{
+    /* border: 1px solid; */
+    width: 75%;
+}
+
+.key-container h1{
+    font-family: "Rammetto One", cursive;
+    font-size: 18px;
+    text-align: left;
+}
+
+.key-row{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    align-items: center;
+    gap: 25px;
+    width: 75%;
+}
+
+.key-row img{
+    width: 62px;
+    transform: translate(-18%, -19%);
+    
+}
+
+.key-image{
+    border: 1px solid hsla(0, 0%, 34%, 0.50);
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.key-text{
+    font-family: cursive;
+}
+
+
+
+
+
+/* -------------------------------DATE------------------------------- */
+.calendar{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.date-container{
+    /* border: 1px solid; */
+    display: grid;
+    /* grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 120px 120px; */
+    grid-template-columns: repeat(7, 120px);
+    grid-template-rows: repeat(5, 120px);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* width: 100%; */
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+
+.day{
+    display: flex;
+    border: 1px solid hsla(0, 0%, 34%, 0.50);
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+
+
+
+
