@@ -99,7 +99,7 @@ body{
 /* -------------------------------RIGHT CONTAINER------------------------------- */
 .right-container{
     /* border: 1px solid; */
-    width: 25%;
+    /* width: 30%; */
     display: flex;
     flex-direction: column;
     height: 800px;
@@ -119,6 +119,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    width: 300px;
 }
 
 .selectedDate-container h1{
@@ -126,8 +127,37 @@ body{
     text-align: center;
 }
 
-#selectedDate-image{
-    width: 150px
+.selectedDate-infoContainer{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    height: 290px;
+}
+
+
+#selectedDate-text{
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+#selectedDateImage{
+    width: 150px;
+    /* border: 1px solid; */
+    
+}
+
+#selectedDateEmotion{
+    width: 150px;
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+#mood-label-container{
+    /* border: 1px solid; */
+    width: 100%;
 }
 
 
@@ -148,7 +178,7 @@ body{
 
 .keyh1{
     /* border: 1px solid; */
-    width: 75%;
+    width: 95%;
 }
 
 .key-container h1{
@@ -163,7 +193,7 @@ body{
     /* border: 1px solid; */
     align-items: center;
     gap: 25px;
-    width: 75%;
+    width: 95%;
 }
 
 .key-row img{
@@ -229,9 +259,71 @@ body{
     align-items: center;
     font-family: cursive;
     cursor: pointer;
+    background-color: rgb(255, 255, 255);
 }
 
 
 
 
 
+
+/* COLORS */
+/* .day-1{
+    background-color: hsla(48, 98%, 58%, 0.45);
+}
+
+.day-2{
+    background-color: hsla(320, 98%, 58%, 0.45);
+
+}
+
+.day-3{
+    background-color: hsla(110, 98%, 58%, 0.45);
+}
+
+.day-4{
+    background-color: hsla(286, 98%, 58%, 0.45);
+}
+
+.day-5{
+    background-color: hsla(172, 98%, 58%, 0.45);
+}
+
+.day-6{
+    background-color: hsla(212, 98%, 58%, 0.45);
+}
+
+.day-7{
+    background-color: hsla(0, 98%, 58%, 0.45);
+} */
+
+
+
+.relaxed{
+    background-color: hsla(48, 98%, 58%, 0.45);
+}
+
+.happy{
+    background-color: hsla(320, 98%, 58%, 0.45);
+
+}
+
+.playful{
+    background-color: hsla(110, 98%, 58%, 0.45);
+}
+
+.bored{
+    background-color: hsla(286, 98%, 58%, 0.45);
+}
+
+.anxious{
+    background-color: hsla(172, 98%, 58%, 0.45);
+}
+
+.sad{
+    background-color: hsla(212, 98%, 58%, 0.45);
+}
+
+.angry{
+    background-color: hsla(0, 98%, 58%, 0.45);
+}
