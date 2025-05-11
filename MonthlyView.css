@@ -9,32 +9,71 @@
 body{
     height: 100vh;
     background-color: #fffed7;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 0;
 
 }
 
 .container {
     /* border: 1px solid; */
-    overflow: hidden;
-    padding: 50px 200px;
+    /* overflow: hidden; */
+    padding: 20px 200px;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+
 }
+
+.bottom-container {
+    /* border: 1px solid; */
+    width: 100%;
+    margin-top: 25px;
+}
+
+.button-container{
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+
+.button-container button{
+    border: none;
+    background-color: #fdd22d;
+    border-radius: 40px;
+    color: white;
+    padding: 10px 25px;
+    font-family: "Rammetto One", cursive;
+    transition: background-color .25s;
+}
+
+.button-container button:hover{
+    border: 1px solid #fdd22d;
+    color: #fdd22d;
+    background-color: #fffed7;
+}
+
+
 
 
 /* -------------------------------LEFT CONTAINER------------------------------- */
 .left-container{
     /* border: 1px solid; */
-    width: 70%;
+    /* width: 70%; */
     display: flex;
     flex-direction: column;
     height: 800px;
+    justify-content: center;
+    align-items: center;
 }
 
 .name-container{
@@ -42,7 +81,9 @@ body{
     height: 100px;
     display: flex;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px  10px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .name-container h1{
@@ -144,7 +185,8 @@ body{
     font-family: cursive;
     border-bottom: 1px solid;
     height: 100%;
-    width: 250px;
+    width: 200px;
+    /* border: 1px solid; */
 }
 
 
@@ -157,9 +199,9 @@ body{
     display: flex;
     justify-content: center;   /* horizontal center */
     align-items: center;       /* vertical center */
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .date-container{
@@ -167,14 +209,14 @@ body{
     display: grid;
     /* grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
     grid-template-rows: 120px 120px 120px 120px 120px; */
-    grid-template-columns: repeat(7, 120px);
-    grid-template-rows: repeat(5, 120px);
+    grid-template-columns: repeat(7, 105px);
+    grid-template-rows: repeat(5, 105px);
     justify-content: center;
     align-items: center;
     gap: 20px;
     /* width: 100%; */
-    max-width: 700px;
-    box-sizing: border-box;
+    /* max-width: 700px; */
+    /* box-sizing: border-box; */
 }
 
 
