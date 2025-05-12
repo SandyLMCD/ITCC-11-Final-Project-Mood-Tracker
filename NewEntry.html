@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/NewEntry-Styles.css" />
+    <link rel="stylesheet" href="NewEntry-Styles.css" />
   </head>
   <body>
     <div class="container">
@@ -13,52 +13,52 @@
         <div class="date">Date: {{Insert Date Here}}</div>
       </div>
       <div class="emotions-container">
-        <div class="emotion-item">
+        <div class="emotion-item" onclick="selectMood('relaxed')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/relaxed-Photoroom.png"
+            src="emotion-assets/relaxed-Photoroom.png"
           />
           <div class="emotion-label">Relaxed</div>
         </div>
-        <div class="emotion-item excited">
+        <div class="emotion-item excited" onclick="selectMood('excited')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/happy-Photoroom.png"
+            src="emotion-assets/happy-Photoroom.png"
           />
           <div class="emotion-label">Happy</div>
         </div>
-        <div class="emotion-item playful">
+        <div class="emotion-item playful" onclick="selectMood('playful')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/playful-Photoroom.png"
+            src="emotion-assets/playful-Photoroom.png"
           />
           <div class="emotion-label">Playful</div>
         </div>
-        <div class="emotion-item bored">
+        <div class="emotion-item bored" onclick="selectMood('bored')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/bored-Photoroom.png"
+            src="emotion-assets/bored-Photoroom.png"
           />
           <div class="emotion-label">Bored</div>
         </div>
-        <div class="emotion-item anxious">
+        <div class="emotion-item anxious" onclick="selectMood('anxious')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/anxious-Photoroom.png"
+            src="emotion-assets/anxious-Photoroom.png"
           />
           <div class="emotion-label">Anxious</div>
         </div>
-        <div class="emotion-item sad">
+        <div class="emotion-item sad" onclick="selectMood('sad')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/sad-Photoroom.png"
+            src="emotion-assets/sad-Photoroom.png"
           />
           <div class="emotion-label">Sad</div>
         </div>
-        <div class="emotion-item angry">
+        <div class="emotion-item angry" onclick="selectMood('angry')">
           <img
             class="emotion-image"
-            src="/Final Proj Assets/angry-Photoroom.png"
+            src="emotion-assets/angry-Photoroom.png"
           />
           <div class="emotion-label">Angry</div>
         </div>
@@ -82,9 +82,11 @@
           data-start-decorator?="false"
           data-state="Hover"
         >
-          <div class="button-text save-text">Save Entry</div>
+          <div class="button-text save-text" id="saveEntryBtn">Save Entry</div>
         </div>
       </div>
     </div>
+
+    <script src="NewEntry.js"></script>
   </body>
 </html>

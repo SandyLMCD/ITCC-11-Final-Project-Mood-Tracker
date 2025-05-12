@@ -70,6 +70,10 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.selected {
+  transform: scale(1.1);
+}
+
 .emotion-image {
   align-self: stretch;
   height: 163px;
