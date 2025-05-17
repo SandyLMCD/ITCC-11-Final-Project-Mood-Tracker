@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+
+body {
+  background-image: url("/emotion-assets/UPDATED\ LOGIN\ PAGE\ IMAGE.png");
+  display: flex;
+  justify-content: center; /* Changed from left to center */
+  align-items: center;
+  min-height: 100vh; /* Ensures full viewport height */
+  margin: 0; /* Removed top margin for better centering */
+  background-size: cover;
+  background-position: center; /* Ensures background is properly centered */
+}
+
+a {
+  color: #282828;
+  text-decoration: underline;
+  text-decoration-color: #ff90bb; /* Matching the brand color */
+  text-decoration-thickness: 2px; /* Custom thickness */
+  text-underline-offset: 3px; /* Adds space between text and underline */
+}
+
+.wrapper {
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+  background: linear-gradient(#ff90bb, #ffc1da, #f8f8e1, #8accd5);
+  color: white;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+  text-align: center;
+  color: #282828;
+  font-family: "Rammetto One", cursive;
+}
+
+.wrapper p {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #282828;
+  font-family: "rammetto One", cursive;
+}
+
+.wrapper h3 {
+  font-size: 18px;
+  margin: 30px 0 10px;
+  color: #282828;
+  font-family: "Rammetto One", cursive;
+}
+
+.wrapper .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 0px 0 30px;
+  font-family: "Rammetto One", cursive;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 45px 20px 20px;
+}
+
+.wrapper .remem-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 20px;
+  color: #282828;
+  font-family: "Rammetto One", cursive;
+}
+
+.remem-forgot a {
+  text-decoration: none; /* Overriding the default underline for these specific links */
+}
+
+.remem-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 39px;
+  background: white;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-family: "Rammetto One", cursive;
+  color: #282828;
+}
+
+.wrapper .btn:hover {
+  background: #ff90bb;
+  color: white;
+  transition: 0.2s;
+}
+
+.regis-link a {
+  text-decoration: none; /* Overriding the default underline for these specific links */
+}
+
+.regis-link a:hover {
+  text-decoration: underline;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 320px;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 280px;
+    padding: 10px 15px;
+  }
+
+  .wrapper h1 {
+    font-size: 24px;
+  }
+}

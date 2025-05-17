@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form | ITCC 11.1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/LoginSignUp-Styles.css" />
+    <style>
+      .wrapper {
+        display: none;
+      }
+      .wrapper.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Login Form -->
+    <div class="wrapper active" id="login-form">
+      <div class="form-box">
+        <form action="">
+          <h1>Welcome back</h1>
+          <p>Welcome back! Please enter your details.</p>
+          <h3>Email</h3>
+          <div class="input-box">
+            <input
+              type="text"
+              id="wemail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <h3>Password</h3>
+          <div class="input-box">
+            <input
+              type="password"
+              id="wpassword"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="remem-forgot">
+            <label><input type="checkbox" /> Remember for 30 days</label>
+            <a href="#">Forgot password</a>
+          </div>
+          <button type="submit" class="btn">Sign in</button>
+          <button type="button" class="btn">Sign in with Google</button>
+          <div class="regis-link">
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showForm('register-form')">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="wrapper" id="register-form">
+      <div class="form-box">
+        <form action="">
+          <h1>Register</h1>
+          <p>Welcome! Please enter your details.</p>
+          <h3>Name</h3>
+          <div class="input-box">
+            <input type="text" id="name" placeholder="Jose Rizal" required />
+          </div>
+          <h3>Email</h3>
+          <div class="input-box">
+            <input
+              type="text"
+              id="email"
+              placeholder="JoseRizal@gmail.com"
+              required
+            />
+          </div>
+          <h3>Password</h3>
+          <div class="input-box">
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="regis-link">
+            <p>
+              Already have an account?
+              <a href="#" onclick="showForm('login-form')">Sign in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function showForm(formId) {
+        document.getElementById("login-form").classList.remove("active");
+        document.getElementById("register-form").classList.remove("active");
+        document.getElementById(formId).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
