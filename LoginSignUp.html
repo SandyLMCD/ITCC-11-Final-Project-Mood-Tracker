@@ -45,7 +45,7 @@
           </div>
           <div class="remem-forgot">
             <label><input type="checkbox" /> Remember for 30 days</label>
-            <a href="#">Forgot password</a>
+            <a href="#" onclick="showForm('forgot-password-form')">Forgot password</a>
           </div>
           <button type="submit" class="btn">Sign in</button>
           <button type="button" class="btn">Sign in with Google</button>
@@ -98,10 +98,36 @@
       </div>
     </div>
 
+    <!--Forgot Password Form -->
+    <div class="wrapper" id="forgot-password-form">
+      <div class="form-box">
+        <form action="">
+          <h1>Forgot Password</h1>
+          <p>Enter your email to reset your password.</p>
+          <h3>Email</h3>
+          <div class="input-box">
+            <input
+              type="text"
+              id="forgot-email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Send Reset Link</button>
+          <div class="regis-link">
+            <p>
+              Remembered your password?
+              <a href="#" onclick="showForm('login-form')">Sign in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
     <script>
       function showForm(formId) {
         document.getElementById("login-form").classList.remove("active");
         document.getElementById("register-form").classList.remove("active");
+        document.getElementById("forgot-password-form").classList.remove("active");
         document.getElementById(formId).classList.add("active");
       }
     </script>
