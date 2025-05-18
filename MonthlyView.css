@@ -119,12 +119,12 @@ body {
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   width: 300px;
 }
 
 .selectedDate-container h1 {
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 15px;
+  gap: 10px;
   height: 290px;
 }
 
@@ -278,4 +278,28 @@ body {
 
 .angry {
   background-color: hsla(0, 98%, 58%, 0.45);
+}
+
+/* Style for the Add Mood button */
+#add-mood-container {
+  text-align: center;
+}
+
+#addMoodBtn {
+  background-color: #fdd22d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  font-family: "Rammetto One", cursive;
+  border-radius: 30px;
+}
+
+#addMoodBtn:hover {
+  border: 1px solid #fdd22d;
+  color: #fdd22d;
+  background-color: #fffed7;
 }

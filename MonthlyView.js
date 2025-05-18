@@ -10,10 +10,16 @@ dateDisplay.innerHTML = `On ${currentMonth} ${currentYear}, <br> I felt...`;
 //EVENT LISTENER FUNCTION = when clicked, it display on the text content or innerHTML
 const dates = document.querySelectorAll(".day");
 
+// Get references to the new elements
+const addMoodContainer = document.getElementById("add-mood-container");
+const addMoodBtn = document.getElementById("addMoodBtn");
+let selectedDay = null; // To keep track of which day was clicked
+
+// Update the date click handler
 dates.forEach((date) => {
   date.addEventListener("click", (event) => {
     const clickedDate = date.textContent;
-    console.log(clickedDate);
+    selectedDay = clickedDate; // Store the selected day
 
     const selectedDateImage = document.getElementById("selectedDateImage");
     const selectedDateh1 = document.getElementById("mood-label");
@@ -21,31 +27,27 @@ dates.forEach((date) => {
     if (event.target.classList.contains("relaxed")) {
       selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/relaxed-Photoroom.png">`;
       selectedDateh1.textContent = "Relaxed";
-    } else if (event.target.classList.contains("happy")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/happy-Photoroom.png">`;
-      selectedDateh1.textContent = "Happy";
-    } else if (event.target.classList.contains("playful")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/playful-Photoroom.png">`;
-      selectedDateh1.textContent = "Playful";
-    } else if (event.target.classList.contains("bored")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/bored-Photoroom.png">`;
-      selectedDateh1.textContent = "Bored";
-    } else if (event.target.classList.contains("anxious")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/anxious-Photoroom.png">`;
-      selectedDateh1.textContent = "Anxious";
-    } else if (event.target.classList.contains("sad")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/sad-Photoroom.png">`;
-      selectedDateh1.textContent = "Sad";
-    } else if (event.target.classList.contains("angry")) {
-      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/angry-Photoroom.png">`;
-      selectedDateh1.textContent = "Angry";
-    } else {
+      addMoodContainer.style.display = "none"; // Hide button for days with mood
+    }
+    // ... keep all your other mood conditions the same ...
+    else {
       selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="/emotion-assets/no entry mood-Photoroom.png">`;
       selectedDateh1.textContent = "No mood recorded";
+      addMoodContainer.style.display = "block"; // Show button for empty days
     }
 
     dateDisplay.innerHTML = `On ${currentMonth} ${clickedDate}, ${currentYear}, <br> I felt...`;
   });
+});
+
+// Add click handler for the Add Mood button
+addMoodBtn.addEventListener("click", () => {
+  if (selectedDay) {
+    // Store the selected day in localStorage to use in the NewEntry page
+    localStorage.setItem("selectedDay", selectedDay);
+    // Redirect to the NewEntry page
+    window.location.href = "NewEntry.html";
+  }
 });
 
 // GET CURRENT DAY MOOD FROM LOCAL STORAGE INFO FROM NewEntry
