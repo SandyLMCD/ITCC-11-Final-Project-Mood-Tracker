@@ -9,6 +9,7 @@ body {
   margin: 0; /* Removed top margin for better centering */
   background-size: cover;
   background-position: center; /* Ensures background is properly centered */
+  flex-direction: column;
 }
 
 a {
@@ -134,4 +135,17 @@ a {
   .wrapper h1 {
     font-size: 24px;
   }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: #282828; /* Dark background for the footer */
+  color: white; /* White text for contrast */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }

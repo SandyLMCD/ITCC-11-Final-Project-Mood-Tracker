@@ -16,6 +16,15 @@
       .wrapper.active {
         display: block;
       }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 14px;
+        color: #666;
+        border-top: 1px solid #eee;
+      }
     </style>
   </head>
   <body>
@@ -44,8 +53,10 @@
             />
           </div>
           <div class="remem-forgot">
-            <label><input type="checkbox" /> Remember for 30 days</label>
-            <a href="#" onclick="showForm('forgot-password-form')">Forgot password</a>
+            <label> <input type="checkbox" /> Remember for 30 days </label>
+            <a href="#" onclick="showForm('forgot-password-form')"
+              >Forgot password</a
+            >
           </div>
           <button type="submit" class="btn">Sign in</button>
           <button type="button" class="btn">Sign in with Google</button>
@@ -122,12 +133,22 @@
           </div>
         </form>
       </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Designed and Developed by Kate Almonte, Sandy Lumacad, and Frances Ryle
+      Tan in compliance of the ITCC 11.1 - Event Driven Programming Final
+      Project.
+    </footer>
 
     <script>
       function showForm(formId) {
         document.getElementById("login-form").classList.remove("active");
         document.getElementById("register-form").classList.remove("active");
-        document.getElementById("forgot-password-form").classList.remove("active");
+        document
+          .getElementById("forgot-password-form")
+          .classList.remove("active");
         document.getElementById(formId).classList.add("active");
       }
     </script>
