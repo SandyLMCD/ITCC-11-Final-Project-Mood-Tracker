@@ -7,28 +7,6 @@ const currentYear = currentDate.getFullYear();
 
 dateDisplay.innerHTML = `On ${currentMonth} ${currentYear}, <br> I felt...`;
 
-//ADD COLORS (for testing) in the first week
-const day1 = document.querySelector(".day-1");
-day1.classList.add("relaxed");
-
-const day2 = document.querySelector(".day-2");
-day2.classList.add("happy");
-
-const day3 = document.querySelector(".day-3");
-day3.classList.add("playful");
-
-const day4 = document.querySelector(".day-4");
-day4.classList.add("bored");
-
-const day5 = document.querySelector(".day-5");
-day5.classList.add("anxious");
-
-const day6 = document.querySelector(".day-6");
-day6.classList.add("sad");
-
-const day7 = document.querySelector(".day-7");
-day7.classList.add("angry");
-
 //EVENT LISTENER FUNCTION = when clicked, it display on the text content or innerHTML
 const dates = document.querySelectorAll(".day");
 
@@ -62,8 +40,8 @@ dates.forEach((date) => {
       selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="emotion-assets/angry-Photoroom.png">`;
       selectedDateh1.textContent = "Angry";
     } else {
-      selectedDateImage.innerHTML = ``;
-      selectedDateh1.textContent = "";
+      selectedDateImage.innerHTML = `<img id="selectedDateEmotion" src="/emotion-assets/no entry mood-Photoroom.png">`;
+      selectedDateh1.textContent = "No mood recorded";
     }
 
     dateDisplay.innerHTML = `On ${currentMonth} ${clickedDate}, ${currentYear}, <br> I felt...`;
@@ -75,10 +53,24 @@ const mood = localStorage.getItem("selectMood");
 const day = localStorage.getItem("currentUserDay");
 
 if (mood && day) {
-  targetDivDate = document.querySelector(`.day-${day}`);
+  const targetDivDate = document.querySelector(`.day-${day}`);
   if (targetDivDate) {
+    // Clear any existing mood classes
+    targetDivDate.classList.remove(
+      "relaxed",
+      "happy",
+      "playful",
+      "bored",
+      "anxious",
+      "sad",
+      "angry"
+    );
+    // Add the new mood class
     targetDivDate.classList.add(mood);
   }
+  // Clear the local storage after use
+  localStorage.removeItem("selectMood");
+  localStorage.removeItem("currentUserDay");
 }
 
 // BUTTON TO LOGOUT (but now back to NewEntry lang sa) = TEMPORARY
@@ -160,4 +152,27 @@ document.addEventListener("DOMContentLoaded", function () {
       handleLogout();
     });
   }
+});
+
+///////////////////////////////////////////////
+
+function initializeEmptyCalendar() {
+  const allDays = document.querySelectorAll(".day");
+  allDays.forEach((day) => {
+    day.classList.remove(
+      "relaxed",
+      "happy",
+      "playful",
+      "bored",
+      "anxious",
+      "sad",
+      "angry"
+    );
+  });
+}
+
+// Call this when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  initializeEmptyCalendar();
+  // ... rest of your existing DOMContentLoaded code
 });

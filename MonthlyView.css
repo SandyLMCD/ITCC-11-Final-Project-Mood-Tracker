@@ -6,324 +6,276 @@
   padding: 0;
 }
 
-body{
-    height: 100vh;
-    background-color: #fffed7;
-    /* width: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0;
+/* Hide scrollbar for all browsers while maintaining scroll functionality */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #fffed7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: auto; /* Ensure scrolling still works */
 }
 
 .container {
-    /* border: 1px solid; */
-    /* overflow: hidden; */
-    padding: 20px 200px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-
+  padding: 2px 200px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .bottom-container {
-    /* border: 1px solid; */
-    width: 100%;
-    margin-top: 25px;
+  /* border: 1px solid; */
+  width: 100%;
+  margin-top: 25px;
 }
 
-.button-container{
-    /* border: 1px solid; */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    
+.button-container {
+  /* border: 1px solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-.button-container button{
-    border: none;
-    background-color: #fdd22d;
-    border-radius: 40px;
-    color: white;
-    padding: 10px 25px;
-    font-family: "Rammetto One", cursive;
-    transition: background-color .25s;
-    cursor: pointer;
+.button-container button {
+  border: none;
+  background-color: #fdd22d;
+  border-radius: 40px;
+  color: white;
+  padding: 10px 25px;
+  font-family: "Rammetto One", cursive;
+  transition: background-color 0.25s;
+  cursor: pointer;
 }
 
-.button-container button:hover{
-    border: 1px solid #fdd22d;
-    color: #fdd22d;
-    background-color: #fffed7;
+.button-container button:hover {
+  border: 1px solid #fdd22d;
+  color: #fdd22d;
+  background-color: #fffed7;
 }
-
-
-
 
 /* -------------------------------LEFT CONTAINER------------------------------- */
-.left-container{
-    /* border: 1px solid; */
-    /* width: 70%; */
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-    justify-content: center;
-    align-items: center;
+.left-container {
+  /* border: 1px solid; */
+  /* width: 70%; */
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
 }
 
-.name-container{
-    /* border: 1px solid; */
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 15px  10px;
-    max-width: 100%;
-    width: 100%;
+.name-container {
+  /* border: 1px solid; */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  max-width: 100%;
+  width: 100%;
 }
 
-.name-container h1{
-    font-family: "Rammetto One", cursive;
-    font-size: 36px;
+.name-container h1 {
+  font-family: "Rammetto One", cursive;
+  font-size: 36px;
 }
-
-
-
-
 
 /* -------------------------------RIGHT CONTAINER------------------------------- */
-.right-container{
-    /* border: 1px solid; */
-    /* width: 30%; */
-    display: flex;
-    flex-direction: column;
-    height: 800px;
+.right-container {
+  /* border: 1px solid; */
+  /* width: 30%; */
+  display: flex;
+  flex-direction: column;
+  height: 800px;
 }
 
-.selectedDate-container{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid hsla(0, 0%, 34%, 0.50);
-    /* border-radius: 15px; */
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Rammetto One", cursive;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 300px;
+.selectedDate-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsla(0, 0%, 34%, 0.5);
+  /* border-radius: 15px; */
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rammetto One", cursive;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
 }
 
-.selectedDate-container h1{
-    font-size: 18px;
-    text-align: center;
+.selectedDate-container h1 {
+  font-size: 18px;
+  text-align: center;
 }
 
-.selectedDate-infoContainer{
-    /* border: 1px solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 15px;
-    height: 290px;
+.selectedDate-infoContainer {
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  height: 290px;
 }
 
-
-#selectedDate-text{
-    /* border: 1px solid; */
-    width: 100%;
+#selectedDate-text {
+  /* border: 1px solid; */
+  width: 100%;
 }
 
-#selectedDateImage{
-    width: 150px;
-    /* border: 1px solid; */
-    
+#selectedDateImage {
+  width: 150px;
+  /* border: 1px solid; */
 }
 
-#selectedDateEmotion{
-    width: 150px;
-    /* border: 1px solid; */
-    width: 100%;
+#selectedDateEmotion {
+  width: 150px;
+  /* border: 1px solid; */
+  width: 100%;
 }
 
-#mood-label-container{
-    /* border: 1px solid; */
-    width: 100%;
+#mood-label-container {
+  /* border: 1px solid; */
+  width: 100%;
 }
-
-
-
 
 /* -------------------------------KEY------------------------------- */
-.key-container{
-    /* border: 1px solid; */
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-top: 10px;
+.key-container {
+  /* border: 1px solid; */
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 10px;
 }
 
-.keyh1{
-    /* border: 1px solid; */
-    width: 95%;
+.keyh1 {
+  /* border: 1px solid; */
+  width: 95%;
 }
 
-.key-container h1{
-    font-family: "Rammetto One", cursive;
-    font-size: 18px;
-    text-align: left;
+.key-container h1 {
+  font-family: "Rammetto One", cursive;
+  font-size: 18px;
+  text-align: left;
 }
 
-.key-row{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid; */
-    align-items: center;
-    gap: 25px;
-    width: 95%;
+.key-row {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid; */
+  align-items: center;
+  gap: 25px;
+  width: 95%;
 }
 
-.key-row img{
-    width: 62px;
-    transform: translate(-18%, -19%);
-
+.key-row img {
+  width: 62px;
+  transform: translate(-18%, -19%);
 }
 
-.key-image{
-    /* border: 1px solid hsla(0, 0%, 34%, 0.50); */
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    border-radius: 5px;
+.key-image {
+  /* border: 1px solid hsla(0, 0%, 34%, 0.50); */
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.key-text{
-    display: flex;
-    align-items: center;
-    font-family: cursive;
-    border-bottom: 1px solid;
-    height: 100%;
-    width: 200px;
-    /* border: 1px solid; */
+.key-text {
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  border-bottom: 1px solid;
+  height: 100%;
+  width: 200px;
+  /* border: 1px solid; */
 }
-
-
-
-
 
 /* -------------------------------DATE------------------------------- */
-.calendar{
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
-    /* height: 100vh; */
-    overflow: hidden;
-    /* box-sizing: border-box; */
+.calendar {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  /* height: 100vh; */
+  overflow: hidden;
+  /* box-sizing: border-box; */
 }
 
-.date-container{
-    /* border: 1px solid; */
-    display: grid;
-    /* grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
+.date-container {
+  /* border: 1px solid; */
+  display: grid;
+  /* grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
     grid-template-rows: 120px 120px 120px 120px 120px; */
-    grid-template-columns: repeat(7, 105px);
-    grid-template-rows: repeat(5, 105px);
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    /* width: 100%; */
-    /* max-width: 700px; */
-    /* box-sizing: border-box; */
+  grid-template-columns: repeat(7, 105px);
+  grid-template-rows: repeat(5, 105px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* width: 100%; */
+  /* max-width: 700px; */
+  /* box-sizing: border-box; */
 }
 
-
-.day{
-    display: flex;
-    border: 1px solid hsla(0, 0%, 34%, 0.50);
-    aspect-ratio: 1 / 1;
-    justify-content: center;
-    align-items: center;
-    font-family: cursive;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
+.day {
+  display: flex;
+  border: 1px solid hsla(0, 0%, 34%, 0.5);
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
 }
 
-
-
-
-
-
-/* COLORS */
-/* .day-1{
-    background-color: hsla(48, 98%, 58%, 0.45);
+.relaxed {
+  background-color: hsla(48, 98%, 58%, 0.45);
 }
 
-.day-2{
-    background-color: hsla(320, 98%, 58%, 0.45);
-
+.happy {
+  background-color: hsla(320, 98%, 58%, 0.45);
 }
 
-.day-3{
-    background-color: hsla(110, 98%, 58%, 0.45);
+.playful {
+  background-color: hsla(110, 98%, 58%, 0.45);
 }
 
-.day-4{
-    background-color: hsla(286, 98%, 58%, 0.45);
+.bored {
+  background-color: hsla(286, 98%, 58%, 0.45);
 }
 
-.day-5{
-    background-color: hsla(172, 98%, 58%, 0.45);
+.anxious {
+  background-color: hsla(172, 98%, 58%, 0.45);
 }
 
-.day-6{
-    background-color: hsla(212, 98%, 58%, 0.45);
+.sad {
+  background-color: hsla(212, 98%, 58%, 0.45);
 }
 
-.day-7{
-    background-color: hsla(0, 98%, 58%, 0.45);
-} */
-
-
-
-.relaxed{
-    background-color: hsla(48, 98%, 58%, 0.45);
-}
-
-.happy{
-    background-color: hsla(320, 98%, 58%, 0.45);
-
-}
-
-.playful{
-    background-color: hsla(110, 98%, 58%, 0.45);
-}
-
-.bored{
-    background-color: hsla(286, 98%, 58%, 0.45);
-}
-
-.anxious{
-    background-color: hsla(172, 98%, 58%, 0.45);
-}
-
-.sad{
-    background-color: hsla(212, 98%, 58%, 0.45);
-}
-
-.angry{
-    background-color: hsla(0, 98%, 58%, 0.45);
+.angry {
+  background-color: hsla(0, 98%, 58%, 0.45);
 }
