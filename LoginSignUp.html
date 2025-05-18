@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form | ITCC 11.1</title>
+    <title>Mood Tracker</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/LoginSignUp-Styles.css" />
+    <!-- Your existing head content -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="/auth.js"></script>
     <style>
       .wrapper {
         display: none;
@@ -151,6 +156,26 @@
           .classList.remove("active");
         document.getElementById(formId).classList.add("active");
       }
+    </script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
+        authDomain: "itcc11-moodtracker.firebaseapp.com",
+        projectId: "itcc11-moodtracker",
+        storageBucket: "itcc11-moodtracker.firebasestorage.app",
+        messagingSenderId: "158918242627",
+        appId: "1:158918242627:web:a5131444b177195e447ff6",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
     </script>
   </body>
 </html>
