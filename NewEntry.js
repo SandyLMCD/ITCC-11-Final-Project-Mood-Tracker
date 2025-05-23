@@ -1,5 +1,21 @@
+// Initialize Firebase (use your actual config)
+const firebaseConfig = {
+  apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
+  authDomain: "itcc11-moodtracker.firebaseapp.com",
+  projectId: "itcc11-moodtracker",
+  storageBucket: "itcc11-moodtracker.appspot.com",
+  messagingSenderId: "158918242627",
+  appId: "1:158918242627:web:a5131444b177195e447ff6",
+};
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+const auth = firebase.auth();
+const db = firebase.firestore();
+
 // DISPLAYS CURRENT DATE
-const date = document.querySelector(".date");
+// const date = document.querySelector(".date");
+
 const options = {
   timeZone: "Asia/Singapore",
   year: "numeric",
@@ -7,21 +23,21 @@ const options = {
   day: "numeric",
 };
 
-const today = new Date().toLocaleDateString("en-US", options);
-date.textContent = `Date: ${today}`;
+// const today = new Date().toLocaleDateString("en-US", options);
+// date.textContent = `Date: ${today}`;
 
-// after clicking one of the moods, it stayed scaled to let the user know it is clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const emotionItems = document.querySelectorAll(".emotion-item");
+// // after clicking one of the moods, it stayed scaled to let the user know it is clicked
+// document.addEventListener("DOMContentLoaded", () => {
+//   const emotionItems = document.querySelectorAll(".emotion-item");
 
-  emotionItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      emotionItems.forEach((i) => i.classList.remove("selected"));
+//   emotionItems.forEach((item) => {
+//     item.addEventListener("click", () => {
+//       emotionItems.forEach((i) => i.classList.remove("selected"));
 
-      item.classList.add("selected");
-    });
-  });
-});
+//       item.classList.add("selected");
+//     });
+//   });
+// });
 
 // SELECT MOOD :>
 function selectMood(mood) {
@@ -33,11 +49,11 @@ function selectMood(mood) {
   console.log(date);
 }
 
-// BUTTON TO GO TO MONTHLYVIEW(??) im not sure = TEMPORARY
-const saveEntryBtn = document.getElementById("saveEntryBtn");
-saveEntryBtn.addEventListener("click", () => {
-  window.location.href = "MonthlyView.html";
-});
+// // BUTTON TO GO TO MONTHLYVIEW(??) im not sure = TEMPORARY
+// const saveEntryBtn = document.getElementById("saveEntryBtn");
+// saveEntryBtn.addEventListener("click", () => {
+//   window.location.href = "MonthlyView.html";
+// });
 
 // Function to handle cancel button click
 function handleCancel() {
@@ -54,37 +70,38 @@ function handleCancel() {
 }
 
 // Add event listener for cancel button (alternative to onclick in HTML)
-document.addEventListener("DOMContentLoaded", function () {
-  // You can use this instead of the onclick attribute if you prefer
-  const cancelButton = document.querySelector(".cancel-button");
-  if (cancelButton) {
-    cancelButton.addEventListener("click", handleCancel);
-  }
+// document.addEventListener("DOMContentLoaded", function () {
+//   // You can use this instead of the onclick attribute if you prefer
+//   const cancelButton = document.querySelector(".cancel-button");
+//   if (cancelButton) {
+//     cancelButton.addEventListener("click", handleCancel);
+//   }
 
-  // Rest of your existing DOMContentLoaded code...
-});
+//   // Rest of your existing DOMContentLoaded code...
+// });
 
 // Update the date display
 function updateDateDisplay() {
+  console.log("updateDateDisplay called");
   const dateElement = document.querySelector(".date");
+  console.log("dateElement:", dateElement);
   if (dateElement) {
     const today = new Date();
-    const selectedDay = localStorage.getItem("selectedDay");
+    let selectedDay = localStorage.getItem("selectedDay");
+    let dayToShow;
 
-    // Use selected day if coming from monthly view, otherwise use today's date
-    const dayToShow = selectedDay || today.getDate();
+    if (selectedDay !== null && !isNaN(parseInt(selectedDay))) {
+      dayToShow = parseInt(selectedDay);
+    } else {
+      dayToShow = today.getDate();
+    }
+
     const month = today.toLocaleString("default", { month: "long" });
     const year = today.getFullYear();
 
     dateElement.textContent = `Date: ${month} ${dayToShow}, ${year}`;
   }
 }
-
-// Call this in your DOMContentLoaded event
-document.addEventListener("DOMContentLoaded", function () {
-  updateDateDisplay();
-  // ... rest of your initialization code
-});
 
 ////////////////////////////////////////////////////////////
 
@@ -142,3 +159,30 @@ function saveMoodEntry() {
       alert("There was an error saving your mood. Please try again.");
     });
 }
+
+// New combined DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", function () {
+  // Update the date display
+  updateDateDisplay();
+
+  // Handle mood selection
+  const emotionItems = document.querySelectorAll(".emotion-item");
+  emotionItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      emotionItems.forEach((i) => i.classList.remove("selected"));
+      item.classList.add("selected");
+    });
+  });
+
+  // Handle cancel button
+  const cancelButton = document.querySelector(".cancel-button");
+  if (cancelButton) {
+    cancelButton.addEventListener("click", handleCancel);
+  }
+
+  // Handle save button
+  const saveEntryBtn = document.getElementById("saveEntryBtn");
+  if (saveEntryBtn) {
+    saveEntryBtn.addEventListener("click", saveMoodEntry);
+  }
+});

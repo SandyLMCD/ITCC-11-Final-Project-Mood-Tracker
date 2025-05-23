@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
 
+/* Mood color backgrounds for calendar days */
+.day.relaxed {
+  background: #fee67c !important;
+}
+.day.happy {
+  background: #feb3b7 !important;
+}
+.day.playful {
+  background: #8ee682 !important;
+}
+.day.bored {
+  background: #ce7fe6 !important;
+}
+.day.anxious {
+  background: #62d7bc !important;
+}
+.day.sad {
+  background: #aae8f8 !important;
+}
+.day.angry {
+  background: #fd5646 !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
