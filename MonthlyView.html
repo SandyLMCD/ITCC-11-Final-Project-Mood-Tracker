@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="MonthlyView.css" />
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
   </head>
   <body>
     <div class="container">
@@ -51,11 +52,11 @@
         <div class="bottom-container">
           <div class="button-container">
             <button id="logoutBtn">Log out</button>
-            <a
+            <!-- <a
               href="https://github.com/SandyLMCD/ITCC-11-Final-Project-Mood-Tracker"
               target="_blank"
               ><button id="gitBtn">git</button></a
-            >
+            > -->
           </div>
         </div>
       </div>
@@ -75,7 +76,6 @@
                 No mood recorded, select a date to start adding moods!
               </h1>
             </div>
-            <!-- Add this new div for the button -->
             <div id="add-mood-container" style="display: none">
               <button id="addMoodBtn">Add Mood</button>
             </div>
@@ -145,7 +145,6 @@
         </div>
       </div>
     </div>
-
     <script src="MonthlyView.js"></script>
   </body>
 </html>

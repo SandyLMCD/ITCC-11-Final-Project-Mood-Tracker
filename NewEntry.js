@@ -85,3 +85,60 @@ document.addEventListener("DOMContentLoaded", function () {
   updateDateDisplay();
   // ... rest of your initialization code
 });
+
+////////////////////////////////////////////////////////////
+
+// In NewEntry.js
+document
+  .getElementById("saveEntryBtn")
+  .addEventListener("click", saveMoodEntry);
+
+function saveMoodEntry() {
+  const user = auth.currentUser;
+  if (!user) {
+    alert("Please log in to save your mood");
+    return;
+  }
+
+  const selectedMood = localStorage.getItem("selectMood");
+  if (!selectedMood) {
+    alert("Please select a mood first");
+    return;
+  }
+
+  const today = new Date();
+  const selectedDay = localStorage.getItem("selectedDay");
+  const dayToSave = selectedDay ? parseInt(selectedDay) : today.getDate();
+  const month = today.getMonth() + 1; // Months are 0-indexed
+  const year = today.getFullYear();
+  const dateString = `${year}-${month.toString().padStart(2, "0")}-${dayToSave
+    .toString()
+    .padStart(2, "0")}`;
+
+  // Create mood entry object
+  const moodEntry = {
+    userId: user.uid,
+    mood: selectedMood,
+    date: dateString,
+    day: dayToSave,
+    month: month,
+    year: year,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+  };
+
+  // Add to Firestore
+  db.collection("moodEntries")
+    .add(moodEntry)
+    .then(() => {
+      console.log("Mood entry saved successfully");
+      // Clear local storage
+      localStorage.removeItem("selectMood");
+      localStorage.removeItem("selectedDay");
+      // Redirect to monthly view
+      window.location.href = "MonthlyView.html";
+    })
+    .catch((error) => {
+      console.error("Error saving mood entry: ", error);
+      alert("There was an error saving your mood. Please try again.");
+    });
+}
