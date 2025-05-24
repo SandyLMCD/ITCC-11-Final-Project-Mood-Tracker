@@ -3,21 +3,21 @@
 body {
   background-image: url("/emotion-assets/UPDATED\ LOGIN\ PAGE\ IMAGE.png");
   display: flex;
-  justify-content: center; /* Changed from left to center */
+  justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensures full viewport height */
-  margin: 0; /* Removed top margin for better centering */
+  min-height: 100vh;
+  margin: 0;
   background-size: cover;
-  background-position: center; /* Ensures background is properly centered */
+  background-position: center;
   flex-direction: column;
 }
 
 a {
   color: #282828;
   text-decoration: underline;
-  text-decoration-color: #ff90bb; /* Matching the brand color */
-  text-decoration-thickness: 2px; /* Custom thickness */
-  text-underline-offset: 3px; /* Adds space between text and underline */
+  text-decoration-color: #ff90bb;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .wrapper {
@@ -83,7 +83,7 @@ a {
 }
 
 .remem-forgot a {
-  text-decoration: none; /* Overriding the default underline for these specific links */
+  text-decoration: none;
 }
 
 .remem-forgot a:hover {
@@ -111,7 +111,7 @@ a {
 }
 
 .regis-link a {
-  text-decoration: none; /* Overriding the default underline for these specific links */
+  text-decoration: none;
 }
 
 .regis-link a:hover {
@@ -144,8 +144,8 @@ a {
   right: 0;
   text-align: center;
   padding: 10px;
-  background-color: #282828; /* Dark background for the footer */
-  color: white; /* White text for contrast */
+  background-color: #282828;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 14px;
 }

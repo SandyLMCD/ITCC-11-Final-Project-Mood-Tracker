@@ -1,4 +1,4 @@
-// Initialize Firebase (use your actual config)
+// Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
   authDomain: "itcc11-moodtracker.firebaseapp.com",
@@ -13,9 +13,6 @@ if (!firebase.apps.length) {
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// DISPLAYS CURRENT DATE
-// const date = document.querySelector(".date");
-
 const options = {
   timeZone: "Asia/Singapore",
   year: "numeric",
@@ -23,23 +20,7 @@ const options = {
   day: "numeric",
 };
 
-// const today = new Date().toLocaleDateString("en-US", options);
-// date.textContent = `Date: ${today}`;
-
-// // after clicking one of the moods, it stayed scaled to let the user know it is clicked
-// document.addEventListener("DOMContentLoaded", () => {
-//   const emotionItems = document.querySelectorAll(".emotion-item");
-
-//   emotionItems.forEach((item) => {
-//     item.addEventListener("click", () => {
-//       emotionItems.forEach((i) => i.classList.remove("selected"));
-
-//       item.classList.add("selected");
-//     });
-//   });
-// });
-
-// SELECT MOOD :>
+// SELECT MOOD
 function selectMood(mood) {
   localStorage.setItem("selectMood", mood);
   console.log(mood);
@@ -49,15 +30,9 @@ function selectMood(mood) {
   console.log(date);
 }
 
-// // BUTTON TO GO TO MONTHLYVIEW(??) im not sure = TEMPORARY
-// const saveEntryBtn = document.getElementById("saveEntryBtn");
-// saveEntryBtn.addEventListener("click", () => {
-//   window.location.href = "MonthlyView.html";
-// });
-
 // Function to handle cancel button click
 function handleCancel() {
-  // Check if we came from a specific day selection
+  // Check if it came from a specific day selection
   const selectedDay = localStorage.getItem("selectedDay");
 
   // Clear any temporary storage
@@ -68,17 +43,6 @@ function handleCancel() {
   // Redirect back to Monthly View
   window.location.href = "MonthlyView.html";
 }
-
-// Add event listener for cancel button (alternative to onclick in HTML)
-// document.addEventListener("DOMContentLoaded", function () {
-//   // You can use this instead of the onclick attribute if you prefer
-//   const cancelButton = document.querySelector(".cancel-button");
-//   if (cancelButton) {
-//     cancelButton.addEventListener("click", handleCancel);
-//   }
-
-//   // Rest of your existing DOMContentLoaded code...
-// });
 
 // Update the date display
 function updateDateDisplay() {

@@ -1,7 +1,6 @@
-// Add this script to your HTML head (after firebase-app-compat.js)
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>;
 
-// Update your firebase-config.js
+// Updated firebase-config.js
 const firebaseConfig = {
   apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
   authDomain: "itcc11-moodtracker.firebaseapp.com",

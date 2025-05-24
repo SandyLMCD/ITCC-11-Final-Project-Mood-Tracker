@@ -1,4 +1,4 @@
-// Initialize Firebase (same as before)
+// Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
   authDomain: "itcc11-moodtracker.firebaseapp.com",
@@ -48,7 +48,6 @@ function loginWithEmail() {
   const email = document.getElementById("wemail").value;
   const password = document.getElementById("wpassword").value;
 
-  // Clear previous messages
   showError("login-form", "");
   showSuccess("login-form", "");
 
@@ -67,7 +66,6 @@ function registerWithEmail() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  // Clear previous messages
   showError("register-form", "");
   showSuccess("register-form", "");
 
@@ -116,7 +114,7 @@ function registerWithEmail() {
     .then(() => {
       // Show success message and redirect to login
       showSuccess("register-form", "Registration successful! Please log in.");
-      // Optionally auto-switch to login form after delay
+
       setTimeout(() => {
         showForm("login-form");
         // Clear the form
@@ -127,19 +125,6 @@ function registerWithEmail() {
     })
     .catch((error) => {
       showError("register-form", getFriendlyAuthError(error.code));
-    });
-}
-
-// Google Sign-In
-function signInWithGoogle() {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  auth
-    .signInWithPopup(provider)
-    .then((result) => {
-      window.location.href = "/MonthlyView.html";
-    })
-    .catch((error) => {
-      showError("login-form", getFriendlyAuthError(error.code));
     });
 }
 
@@ -220,12 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       loginWithEmail();
     });
-
-    // Google sign-in button
-    const googleBtn = loginForm.querySelector(".btn:nth-of-type(2)");
-    if (googleBtn) {
-      googleBtn.addEventListener("click", signInWithGoogle);
-    }
   }
 
   const registerForm = document.querySelector("#register-form form");

@@ -1,6 +1,5 @@
 console.log("MonthlyView.js loaded");
 
-//DISPLAY DATES BUT WITHOUT THE DAY PA
 const dateDisplay = document.getElementById("date-display");
 
 const currentDate = new Date();
@@ -39,7 +38,7 @@ function initializeEmptyCalendar() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Firebase (make sure this matches your config)
+  // Initialize Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyD_M-2M1jB2D-o927BdahbSg7TvEwCjbt8",
     authDomain: "itcc11-moodtracker.firebaseapp.com",
@@ -66,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentYear = currentDate.getFullYear();
   const currentMonthNum = currentDate.getMonth() + 1;
 
-  // Place all your initialization code here, e.g.:
   auth.onAuthStateChanged((user) => {
     if (user) {
       const nameElement = document.querySelector(".name-container h1");
